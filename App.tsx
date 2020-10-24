@@ -1,21 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppLoading } from 'expo';
+import { StatusBar } from 'expo-status-bar';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import Routes from './src/routes';
+
+import { Roboto_700Bold, Roboto_400Regular, Roboto_900Black, useFonts } from '@expo-google-fonts/roboto';
+import { Raleway_700Bold, Raleway_400Regular, Raleway_900Black } from '@expo-google-fonts/raleway';
+import { Poppins_400Regular, Poppins_600SemiBold, Poppins_900Black } from '@expo-google-fonts/poppins';
+
+const App: React.FC = () => {
+
+  let [fontsLoaded] = useFonts({
+    Roboto_400Regular, 
+    Roboto_900Black,
+    Roboto_700Bold,
+    Raleway_700Bold,
+    Raleway_400Regular,
+    Raleway_900Black,
+    Poppins_400Regular,
+    Poppins_600SemiBold,
+    Poppins_900Black
+  }); 
+  
+  if (!fontsLoaded){
+    return <AppLoading/>;  
+  } else {
+    return (
+    <>
+      <StatusBar style="light"  />
+      <Routes />  
+    </>
+    );
+  } 
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
