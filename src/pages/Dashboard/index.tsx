@@ -16,7 +16,7 @@ function Dashboard (){
     }
 
     function handleLanceButton(){
-        navigate('ChildrenForm');
+        navigate('MenuTabsRegister');
     }
 
     function handleLotButton() {

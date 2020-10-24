@@ -59,14 +59,7 @@ function DoctorsAvailable (){
         )}
         </PageHeader>
         <View style={styles.bottomLancersContainer}>
-            
-            {/* isCaseVisible &&
-                <View style={styles.lotarLoading}>
-                <MaterialIcons name="child-care" size={50} color="#F4F2DA" />
-                <Text style={styles.caseText}>Lote um Serviço para aparecer aqui</Text>
-                </View>
-            */}
-
+           
             <ScrollView
                 style={styles.containerItens}
                 showsHorizontalScrollIndicator= {false}
@@ -76,19 +69,7 @@ function DoctorsAvailable (){
             <DoctorItem />
             <DoctorItem />
             <DoctorItem />
-            {/* lancers.map((doctor: Doctor) => {
-                return (
-                    
-                    <DoctorItem 
-                    key={doctor.id}
-                    doctor={doctor}
-                    loted={loted.includes(doctor.idService)}
-                    
-                    /> 
-                    
-                )
-            }
-            )*/}
+           
             </ScrollView>
         </View>
         </>

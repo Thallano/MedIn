@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
 
     userIDText:{
-        fontFamily: 'Roboto_900Black,',
+        fontFamily: 'Roboto_900Black',
         color: '#F4F2DA',
         fontSize: 18,
         textAlign: 'center',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
 
     titleBold:{
-        fontFamily: 'Roboto_900Black,',
+        fontFamily: 'Roboto_900Black',
         color: '#F4F2DA',
         fontSize: 20,
         textAlign: 'center',

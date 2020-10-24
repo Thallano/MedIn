@@ -6,17 +6,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    header2:{
-        padding: 40,
-        backgroundColor: '#E56264', 
-        justifyContent: 'space-between',
-        borderBottomRightRadius: 80,
-        borderBottomLeftRadius: 80,
-        elevation: 4,
-        marginBottom: -80,
-        marginTop: -30
-    },
-
     title:{
         fontFamily: 'Raleway_700Bold',
         color: '#FFF',
@@ -66,7 +55,7 @@ const styles = StyleSheet.create({
     },
 
     pickerContainer:{
-        backgroundColor: '#183858',
+        backgroundColor: '#14181C',
         borderRadius: 10,
         height: 54,
         marginBottom: 10,

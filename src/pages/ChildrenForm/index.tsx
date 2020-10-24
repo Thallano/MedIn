@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import {View, Text, TextInput, ScrollView, Alert } from 'react-native';
+import React, { useState } from 'react';
+import {View, Text, TextInput, ScrollView } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { MaterialIcons, MaterialCommunityIcons} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -14,13 +14,10 @@ function ChildrenForm (){
     const { navigate } = useNavigation();
 
     const [user_id, setUser] = useState('');
-    const [service, setService] = useState("Crianças Gerais");
+    
     const [description, setDescription] = useState('');
-    const [modality, setModality] = useState("Preço/Hora");
-    const [cost, setCost] = useState('');
-    const [rate, setRate] = useState(0);
-    const [loted, setLoted] = useState(0);
-    const [ratetotal, setRatetotal] = useState(0);
+    const [age, setAge] = useState('');
+    const [weight, setWeight] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     
         
@@ -35,7 +32,7 @@ function ChildrenForm (){
         <ScrollView 
         showsVerticalScrollIndicator={false}
         >
-            <MaterialIcons name="child-care" style={styles.gearIcon} size={55} color="#4b97ff" />
+            <MaterialIcons name="child-care" style={styles.gearIcon} size={55} color="#FFF" />
             <View style={styles.searchForm}>
                     
 
@@ -64,8 +61,8 @@ function ChildrenForm (){
 
                             <TextInput 
                                 style={styles.input}
-                                value={cost}
-                                onChangeText={text =>  setCost(text)}
+                                value={weight}
+                                onChangeText={text =>  setWeight(text)}
                                 placeholder="Peso"
                                 placeholderTextColor="#c1bccc"
                             />
@@ -76,8 +73,8 @@ function ChildrenForm (){
                             
                             <TextInput 
                                 style={styles.input}
-                                value={cost}
-                                onChangeText={text =>  setCost(text)}
+                                value={age}
+                                onChangeText={text =>  setAge(text)}
                                 placeholder="Idade"
                                 placeholderTextColor="#c1bccc"
                             
@@ -99,7 +96,7 @@ function ChildrenForm (){
                     </View> 
             </View>
             <TouchableOpacity style={styles.button} >
-                <Text style={styles.buttontext}>Cadastrar Críança</Text>
+                <Text style={styles.buttontext}>Cadastrar Criança</Text>
                 <MaterialCommunityIcons name="arrow-top-right-thick" size={26} color="#4b97ff" />
             </TouchableOpacity>
          </ScrollView> 
